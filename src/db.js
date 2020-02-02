@@ -19,7 +19,7 @@ let users = [
 
 let posts = [
   {
-    id: '10',
+    id: '+',
     title: 'GraphQL 101',
     body: 'This is how to use GraphQL...',
     published: true,
