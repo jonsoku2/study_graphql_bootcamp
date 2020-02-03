@@ -82,7 +82,13 @@ const Mutation = {
         db.posts.push(post)
 
         if (args.data.published) {
-            pubsub.publish('post', { post })
+            pubsub.publish('post', {
+                post: {
+                    // 일반적인 규칙으로 대문자를 사용
+                    mutation: 'CREATED',
+                    data: post,
+                },
+            })
         }
 
         return post
